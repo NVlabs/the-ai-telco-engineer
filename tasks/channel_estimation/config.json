@@ -1,0 +1,46 @@
+{
+  "workspace": {
+    "path": "workspaces",
+    "docker_image": "agent_chn_est",
+    "memory_limit": "16g",
+    "pids_limit": 4096,
+    "use_gpu": true
+  },
+  "tools_config": {
+    "eval_timeout": 240,
+    "sionna_doc_config": {
+      "cache_dir_path": "api_doc_cache",
+      "embedding_model": "",
+      "embedding_base_url": "",
+      "reranker_model": "",
+      "reranker_base_url": "",
+      "retrieve_k": 12,
+      "rerank_top_n": 4,
+      "summarize_llm": {
+        "model": "",
+        "base_url": "",
+        "temperature": 0.0
+      }
+    }
+  },
+  "num_workers": 5,
+  "higher_is_better": false,
+  "population_size": 20,
+  "num_generations": 10,
+  "timeout": 1200,
+  "task_submit_delay": 30.0,
+  "prompt_path": "prompt.md",
+  "num_ideas": 5,
+  "agent_llm": {
+    "model": "",
+    "base_url": "",
+    "temperature": 0.7,
+    "top_p": 0.95
+  },
+  "manager_llm": {
+    "model": "",
+    "base_url": "",
+    "temperature": 0.7,
+    "top_p": 0.95
+  }
+}

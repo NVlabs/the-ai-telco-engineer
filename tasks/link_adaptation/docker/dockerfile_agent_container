@@ -1,0 +1,4 @@
+FROM python:3.12-slim
+
+# Install additional packages
+RUN pip install numpy

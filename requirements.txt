@@ -1,0 +1,8 @@
+langchain
+langchain-core
+langchain-openai
+langchain-text-splitters
+numpy
+bs4
+faiss-gpu-cu12
+markdownify
