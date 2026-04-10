@@ -15,12 +15,7 @@
       "reranker_model": "",
       "reranker_base_url": "",
       "retrieve_k": 12,
-      "rerank_top_n": 4,
-      "summarize_llm": {
-        "model": "",
-        "base_url": "",
-        "temperature": 0.0
-      }
+      "rerank_top_n": 4
     }
   },
   "num_workers": 5,

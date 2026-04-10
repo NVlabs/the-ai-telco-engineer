@@ -141,7 +141,7 @@ def load_config(config_path: Union[str, Path]) -> Config:
     agent_llm_section = data["agent_llm"]
     agent_llm = LLMConfig(
         api_key=api_key,
-        base_url=agent_llm_section.get("base_url", "https://inference-api.nvidia.com"),
+        base_url=agent_llm_section.get("base_url", ""),
         model=agent_llm_section.get("model", ""),
         temperature=agent_llm_section.get("temperature", 0.7),
         top_p=agent_llm_section.get("top_p", 0.95),
@@ -155,7 +155,7 @@ def load_config(config_path: Union[str, Path]) -> Config:
     manager_llm_section = data["manager_llm"]
     manager_llm = LLMConfig(
         api_key=api_key,
-        base_url=manager_llm_section.get("base_url", "https://inference-api.nvidia.com"),
+        base_url=manager_llm_section.get("base_url", ""),
         model=manager_llm_section.get("model", ""),
         temperature=manager_llm_section.get("temperature", 0.0),
         top_p=manager_llm_section.get("top_p", 0.95),
