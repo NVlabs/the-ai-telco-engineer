@@ -12,12 +12,6 @@ The system runs multiple LLM agents in parallel to explore and optimize algorith
 - Is evaluated with a task-specific evaluation tool
 - Contributes to a leaderboard
 
-## Prerequisites
-
-- Docker with NVIDIA runtime support
-- Python 3.10+
-- NVIDIA GPU with CUDA support
-
 ## Setup
 
 ### 1. Install Python dependencies
@@ -157,10 +151,13 @@ The image name must match `workspace.docker_image` in `config.json`.
 | `agent_llm.model` | LLM model used by agents (workers) |
 | `agent_llm.base_url` | API base URL for the agent LLM |
 | `agent_llm.temperature` | Sampling temperature for agents |
+| `agent_llm.top_p` | Top-p (nucleus) sampling for agents (default: `0.95`) |
 | `agent_llm.model_kwargs` | Optional extra model kwargs (e.g. `{"reasoning_effort": "high"}`) |
 | `manager_llm.model` | LLM model used by the orchestrator (ideas and summaries) |
 | `manager_llm.base_url` | API base URL for the orchestrator LLM |
 | `manager_llm.temperature` | Sampling temperature for the orchestrator (typically 0.0) |
+| `manager_llm.top_p` | Top-p (nucleus) sampling for the orchestrator (default: `0.95`) |
+| `manager_llm.model_kwargs` | Optional extra model kwargs for the orchestrator |
 | `workspace.path` | Directory for agent workspaces (relative to task folder) |
 | `workspace.docker_image` | Docker image for agent containers |
 | `workspace.memory_limit` | Memory limit per container (default: `"16g"`) |
