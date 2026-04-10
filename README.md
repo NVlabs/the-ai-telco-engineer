@@ -272,7 +272,12 @@ Configure the tool through `tools_config.sionna_doc_config` in `config.json`:
             "reranker_model": "<reranker-model-name>",
             "reranker_base_url": "<reranker-server-url>",
             "retrieve_k": 12,
-            "rerank_top_n": 4
+            "rerank_top_n": 4,
+            "summarize_llm": {
+                "model": "<summarization-model-name>",
+                "base_url": "<summarization-api-url>",
+                "temperature": 0.0
+            }
         }
     }
 }
@@ -287,5 +292,9 @@ Configure the tool through `tools_config.sionna_doc_config` in `config.json`:
 | `reranker_base_url` | Base URL of the reranker server |
 | `retrieve_k` | Number of documents to retrieve before reranking |
 | `rerank_top_n` | Number of documents to return after reranking |
+| `summarize_llm` | Optional LLM config for summarizing tutorials before indexing (omit or set to `{}` to skip) |
+| `summarize_llm.model` | LLM model name for summarization |
+| `summarize_llm.base_url` | API base URL for the summarization LLM |
+| `summarize_llm.temperature` | Sampling temperature for summarization (default: `0.0`) |
 
 The embedding and reranker endpoints must speak the OpenAI-compatible protocol (`/v1/embeddings` and `/v1/rerank`). You can serve them with [TEI](https://github.com/huggingface/text-embeddings-inference), [Ollama](https://ollama.com/), [vLLM](https://vllm.ai/), or any compatible server.
