@@ -298,3 +298,17 @@ Configure the tool through `tools_config.sionna_doc_config` in `config.json`:
 | `summarize_llm.temperature` | Sampling temperature for summarization (default: `0.0`) |
 
 The embedding and reranker endpoints must speak the OpenAI-compatible protocol (`/v1/embeddings` and `/v1/rerank`). You can serve them with [TEI](https://github.com/huggingface/text-embeddings-inference), [Ollama](https://ollama.com/), [vLLM](https://vllm.ai/), or any compatible server.
+
+## How to Cite
+
+If you use this software, please cite it as:
+
+
+```bibtex
+@software{the-ai-telco-engineer,
+  title  = {The AI Telco Engineer},
+  author = {{Aït Aoudia}, Fayçal and Hoydis, Jakob and Cammerer, Sebastian and Maggi, Lorenzo and Marti, Gian and Keller, Alexander},
+  note   = {https://github.com/NVlabs/the-ai-telco-engineer},
+  year   = {2026}
+}
+```
