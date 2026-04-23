@@ -305,10 +305,10 @@ If you use this software, please cite it as:
 
 
 ```bibtex
-@software{the-ai-telco-engineer,
-  title  = {The AI Telco Engineer},
-  author = {{Aït Aoudia}, Fayçal and Hoydis, Jakob and Cammerer, Sebastian and Maggi, Lorenzo and Marti, Gian and Keller, Alexander},
-  note   = {https://github.com/NVlabs/the-ai-telco-engineer},
-  year   = {2026}
+@article{aitaoudia2026aitelcoengineer,
+  title        = {{The AI Telco Engineer: Toward Autonomous Discovery of Wireless Communications Algorithms}},
+  author       = {Fay{\c{c}}al A{\"i}t Aoudia and Jakob Hoydis and Sebastian Cammerer and Lorenzo Maggi and Gian Marti and Alexander Keller},
+  year         = {2026},
+  journal      = {arXiv preprint arXiv:2604.19803}
 }
 ```
